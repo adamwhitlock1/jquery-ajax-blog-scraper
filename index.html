@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css"
+    />
+  </head>
+  <body>
+    <h3 class="text-center">A jquery based wordpress post scraper.</h3>
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x grid-margin-x">
+        <div class="cell auto">
+          <div class="input-group">
+            <span class="input-group-label">url</span>
+            <input
+              class="input-group-field"
+              id="url"
+              value="https://codecondo.com"
+              type="text"
+            />
+            <div class="input-group-button">
+              <button id="url_submit" class="button">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x grid-margin-x align-right text-center">
+        <div class="cell auto">
+          <button
+            class="button expanded otherUrl"
+            data-url="https://blog.codepen.io"
+          >
+            CodePen Blog
+          </button>
+        </div>
+        <div class="cell auto">
+          <button
+            id="url_submit"
+            class="button expanded otherUrl"
+            data-url="https://woo360.fun"
+          >
+            Woo360.fun
+          </button>
+        </div>
+        <div class="cell auto">
+          <button
+            id="url_submit"
+            class="button expanded otherUrl"
+            data-url="https://codecondo.com"
+          >
+            codecondo.com
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x grid-margin-x">
+        <div class="cell auto content"></div>
+      </div>
+    </div>
+
+    <style>
+      .content {
+        opacity: 0;
+        border: 3px solid white;
+        transition: all 1s;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0), 0 15px 12px rgba(0, 0, 0, 0);
+      }
+      .done {
+        opacity: 1;
+        border: 3px solid green;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+          0 15px 12px rgba(0, 0, 0, 0.22);
+      }
+    </style>
+
+    <script src="index.js"></script>
+  </body>
+</html>
